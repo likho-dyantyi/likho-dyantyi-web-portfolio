@@ -372,48 +372,48 @@ h5 {
   letter-spacing: 0.04em;
 }
 
-.frmDataEntry {
+#frmDataEntry {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.frmDataEntry div {
+#frmDataEntry div {
   width: 10px;
 }
 
-.frmDataEntry .form-group {
+#frmDataEntry .form-group {
   padding-bottom: 30px;
   padding-left: 10%;
   flex: 1;
   flex-basis: 33%;
 }
 
-.frmDataEntry .form-group2 {
+#frmDataEntry .form-group2 {
   padding-bottom: 30px;
   padding-left: 10%;
   flex: 1;
   flex-basis: 33%;
 }
 
-.frmDataEntry .form-group3 {
+#frmDataEntry .form-group3 {
   padding-bottom: 30px;
   padding-left: 10%;
   flex: 1;
   flex-basis: 33%;
 }
 
-.frmDataEntry label {
+#frmDataEntry label {
   font-size: 1.5em;
   display: block;
 }
 
-.frmDataEntry input {
+#frmDataEntry input {
   padding: 8px;
   width: 70%;
 }
 
-.frmDataEntry textarea {
+#frmDataEntry textarea {
   width: 86.9%;
   height: 100px;
 }
@@ -600,5 +600,11 @@ footer {
   }
   .text-box {
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .interests {
+    padding-top: 240px;
   }
 }
