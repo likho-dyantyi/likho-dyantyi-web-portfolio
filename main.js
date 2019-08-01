@@ -1,3 +1,10 @@
+const functions = require("firebase-functions");
+
+const admin = require("firebase-admin");
+admin.initializeApp();
+
+const nodemailer = require("nodemailer");
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
   apiKey: "AIzaSyDwlaCrpWOuWius26Xcrnk5cQfwVl6RVhE",
@@ -43,5 +50,35 @@ function saveMessage(name, email, message) {
     name: name,
     email: email,
     message: message
+  });
+}
+
+function sendmail(email, fname, lname, subject) {
+  var transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "decoy540.com@gmail.com",
+      pass: "lmnop540"
+    }
+  });
+
+  // Mail sender transport object
+  transporter.sendMail({
+    from: "decoy540.com@gmail.com",
+    to: "likhodyantyi@gmail.com",
+    subject: "Firebase Message",
+    html: `
+    <p><b>Email</b><p>
+    ${email}
+    <p><b>First Name</b><p>
+    ${fname}
+    <p><b>Last Name</b><p>
+    ${lname}
+    <p><b>Message</b><p>
+    ${subject}
+     
+    `
   });
 }
