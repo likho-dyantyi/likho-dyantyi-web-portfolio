@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://kit.fontawesome.com/1111a55b55.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="PHP" href="contact-form-proccessor.php" />
     <title>Likho Dyantyi Web Portfolio</title>
     <script src="https://www.google.com/recaptcha/api.js?render=6LdwoK8UAAAAAJer5vsCUH3gecdlGk-oDGaMq0ii"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <nav id="navbar">
@@ -100,15 +102,11 @@
     <section id="contact">
       <div class="contact-content">
         <h4>Contact</h4>
-        <form id="frmDataEntry" action="/" method="POST">
+        <!-- <form id="frmDataEntry" action="/" method="POST"> -->
+        <form id="frmDataEntry">
           <div class="form-group">
-            <label>Subject:</label>
-            <input
-              type="text"
-              name="Subject"
-              placeholder="Job Opportunity"
-              id="subject"
-            />
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="John Doe" id="name" />
           </div>
           <div class="form-group2">
             <label>E-mail:</label>
@@ -123,7 +121,17 @@
             <label>Message:</label>
             <textarea name="Message" id="message"></textarea>
           </div>
-
+          <div class="recaptcha-response">
+            <input
+              type="hidden"
+              name="g-recaptcha-response"
+              id="g-recaptcha-response"
+            />
+          </div>
+          <!-- <div
+            class="g-recaptcha"
+            data-sitekey="6LephbAUAAAAAPWKSGU7CeumYauYwgjbrz7f9AiH"
+          ></div> -->
           <input class="button" type="submit" value="submit" />
         </form>
 
@@ -134,7 +142,8 @@
                 action: "homepage"
               })
               .then(function(token) {
-                console.log(token);
+                // console.log(token);
+                document.getElementById("g-recaptcha-response").value = token;
               });
           });
         </script>
@@ -168,6 +177,9 @@
         </p>
       </div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+
     <script src="main.js"></script>
   </body>
 </html>
