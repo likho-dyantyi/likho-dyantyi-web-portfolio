@@ -418,6 +418,11 @@ h5 {
   height: 100px;
 }
 
+.g-recaptcha {
+  flex-basis: 100%;
+  border: 1px black solid;
+}
+
 .button {
   -o-transition: 0.2s;
   -ms-transition: 0.2s;

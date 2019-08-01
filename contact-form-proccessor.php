@@ -8,8 +8,10 @@
         $Return = getcaptcha($_POST['g-recaptcha-response']);
         if($Return ->success == true && $Return->score > 0.5){
             echo "succes";
+            // <a href="index.html"></a>;
         }else{
-            echo "you are a robot!!"
+            echo "you are a robot!!";
+            // <a href="index.html"></a>;
         }
     }   
 ?>
