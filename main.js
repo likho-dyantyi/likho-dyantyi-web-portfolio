@@ -1,9 +1,4 @@
-const functions = require("firebase-functions");
-
-const admin = require("firebase-admin");
-admin.initializeApp();
-
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -36,6 +31,7 @@ function submitForm(e) {
 
   //save message
   saveMessage(name, email, message);
+  document.getElementById("frmDataEntry").reset();
 }
 
 //function to get form values
@@ -53,32 +49,7 @@ function saveMessage(name, email, message) {
   });
 }
 
-function sendmail(email, fname, lname, subject) {
-  var transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: "decoy540.com@gmail.com",
-      pass: "lmnop540"
-    }
-  });
-
-  // Mail sender transport object
-  transporter.sendMail({
-    from: "decoy540.com@gmail.com",
-    to: "likhodyantyi@gmail.com",
-    subject: "Firebase Message",
-    html: `
-    <p><b>Email</b><p>
-    ${email}
-    <p><b>First Name</b><p>
-    ${fname}
-    <p><b>Last Name</b><p>
-    ${lname}
-    <p><b>Message</b><p>
-    ${subject}
-     
-    `
-  });
+function recaptcha_callback() {
+  let submit = document.getElementById("submit");
+  submit.classList.remove("invisible");
 }

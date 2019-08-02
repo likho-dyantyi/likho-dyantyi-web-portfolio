@@ -372,55 +372,57 @@ h5 {
   letter-spacing: 0.04em;
 }
 
-#frmDataEntry {
+.contact-container {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 
-#frmDataEntry div {
+.contact-container div {
   width: 10px;
 }
 
-#frmDataEntry .form-group {
+.contact-container .form-group {
   padding-bottom: 30px;
   padding-left: 10%;
   flex: 1;
   flex-basis: 33%;
 }
 
-#frmDataEntry .form-group2 {
+.contact-container .form-group2 {
   padding-bottom: 30px;
   padding-left: 10%;
   flex: 1;
   flex-basis: 33%;
 }
 
-#frmDataEntry .form-group3 {
+.contact-container .form-group3 {
   padding-bottom: 30px;
   padding-left: 10%;
   flex: 1;
   flex-basis: 33%;
+  /* display: block; */
 }
 
-#frmDataEntry label {
+.contact-container label {
   font-size: 1.5em;
   display: block;
 }
 
-#frmDataEntry input {
+.contact-container input {
   padding: 8px;
   width: 70%;
 }
 
-#frmDataEntry textarea {
+.contact-container textarea {
   width: 86.9%;
   height: 100px;
 }
 
 .g-recaptcha {
-  flex-basis: 100%;
-  border: 1px black solid;
+  padding-left: 35%;
+  padding-right: 40%;
+  padding-bottom: 30px;
 }
 
 .button {
@@ -434,12 +436,16 @@ h5 {
   background-color: gray;
   color: white;
   padding: 15px;
-  width: 76.4%;
+  width: 84.7%;
   border: none;
 }
 
 .button:hover {
   background-color: rgb(133, 88, 38);
+}
+
+.invisible {
+  display: none;
 }
 
 .social {
@@ -542,6 +548,10 @@ footer {
     float: unset;
     text-align: unset;
   }
+
+  .g-recaptcha {
+    padding-left: 30%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -605,6 +615,10 @@ footer {
   }
   .text-box {
     width: 100%;
+  }
+
+  .g-recaptcha {
+    padding-left: 10%;
   }
 }
 
