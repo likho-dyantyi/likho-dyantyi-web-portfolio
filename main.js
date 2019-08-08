@@ -1,5 +1,3 @@
-// const nodemailer = require("nodemailer");
-
 // Your web app's Firebase configuration
 var firebaseConfig = {
   apiKey: "AIzaSyDwlaCrpWOuWius26Xcrnk5cQfwVl6RVhE",
@@ -32,6 +30,14 @@ function submitForm(e) {
   //save message
   saveMessage(name, email, message);
   document.getElementById("frmDataEntry").reset();
+
+  //show aleret
+  document.querySelector(".alert").style.display = "block";
+
+  //Hide alert sfter 3 seconds
+  setTimeout(function() {
+    document.querySelector(".alert").style.display = "none";
+  }, 3000);
 }
 
 //function to get form values

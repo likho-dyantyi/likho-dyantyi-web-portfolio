@@ -372,6 +372,15 @@ h5 {
   letter-spacing: 0.04em;
 }
 
+.alert {
+  text-align: center;
+  padding: 10px;
+  background: green;
+  color: white;
+  margin-bottom: 10px;
+  display: none;
+}
+
 .contact-container {
   padding: 20px;
   display: flex;
@@ -417,6 +426,15 @@ h5 {
 .contact-container textarea {
   width: 86.9%;
   height: 100px;
+}
+
+h6 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 2% 2%;
+  color: rgb(133, 88, 38);
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .g-recaptcha {

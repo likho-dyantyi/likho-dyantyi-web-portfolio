@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="PHP" href="contact-form-proccessor.php" />
     <title>Likho Dyantyi Web Portfolio</title>
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdwoK8UAAAAAJer5vsCUH3gecdlGk-oDGaMq0ii"></script> -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
@@ -85,7 +84,7 @@
             <h3>Delphi</h3>
             <p>
               I attended school at COSAT(Centre Of Science And Technology) where
-              i was tought coding in deplphi.
+              i was tought coding in delphi.
               <br />
               Embarcadero® RAD Studio XE™ provides a comprehensive application
               development suite and the fastest way to visually build
@@ -102,20 +101,18 @@
     <section id="contact">
       <div class="contact-content">
         <h4>Contact</h4>
-
-        <!-- <form id="frmDataEntry"  method="POST"> -->
-
-        <!-- <form
-          id="frmDataEntry"
-          method="POST"
-          action="?"
-          onsubmit="return recaptcha_callback()"
-        > -->
+        <div class="alert">Your message has been sent</div>
         <form id="frmDataEntry" method="POST" action="?">
           <div class="contact-container">
             <div class="form-group">
               <label>Name:</label>
-              <input type="text" name="name" placeholder="John Doe" id="name" />
+              <input
+                type="text"
+                name="name"
+                placeholder="John Doe"
+                id="name"
+                required
+              />
             </div>
             <div class="form-group2">
               <label>E-mail:</label>
@@ -124,16 +121,19 @@
                 name="E-mail"
                 placeholder="johndoe@gmail.com"
                 id="email"
+                required
               />
             </div>
             <div class="form-group3">
               <label>Message:</label>
-              <textarea name="Message" id="message"></textarea>
+              <textarea name="Message" id="message" required></textarea>
             </div>
           </div>
+          <h6>please complete the reChaptcha before submiting the form</h6>
           <div
             class="g-recaptcha"
             data-sitekey="6LephbAUAAAAAPWKSGU7CeumYauYwgjbrz7f9AiH"
+            data-callback="recaptcha_callback"
           ></div>
           <input class="button invisible" type="submit" id="submit" />
         </form>
