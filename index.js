@@ -12,14 +12,14 @@ function sendmail(name, email, message) {
     port: 465,
     secure: true,
     auth: {
-      user: "decoy540.com@gmail.com",
+      user: "decoy540@gmail.com",
       pass: "lmnop540"
     }
   });
 
   // Mail sender transport object
   transporter.sendMail({
-    from: "decoy540.com@gmail.com",
+    from: "decoy540@gmail.com",
     to: "likho.dyantyi@younglings.africa",
     subject: "Firebase Message",
     html: `
