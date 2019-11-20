@@ -20,7 +20,7 @@ function sendmail(name, email, message) {
   // Mail sender transport object
   transporter.sendMail({
     from: "decoy540@gmail.com",
-    to: "likho.dyantyi@younglings.africa",
+    to: "likhodyantyi@gmail.com",
     subject: "Firebase Message",
     html: `
     <p><b>Name</b><p>
